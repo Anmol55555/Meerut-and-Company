@@ -1,0 +1,362 @@
+																					/* em :-  Typography , Typographical Spacing
+																					   vw :- Imagery
+																					   %  :- Grid System
+																				 */
+																			
+																			/*margin:auto; make object at horizontally center 
+																									Always give width with margin:auto; */
+																			/* *Always consider max-width , display(inline/block) , 
+																			   *sans-serif fonts instead of serif fonts ,
+																			   *rem instead of em as em gets effected by its parent element , 
+																			   *text-align:justify (each line is stretched so that every line has equal width,
+																			   and the left and right margins are straight (like in magazines and newspapers) ,
+																			   *text-indent , letter-spacing , word-spacing , line-height
+																			*/   
+
+* {
+  box-sizing: border-box;
+}
+.row::after{clear: both;
+			display:block;}
+			
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class *= "col-"]{ display:block;
+				   float:left;
+				 }
+/*For Mobiles*/
+@media only screen and (max-width:600px)
+{
+	.nav a {float: none;
+			width: 100%;
+		   }
+	[class *= "col-"]{width:100%;
+					  float:none;
+					 }
+	body{font-size:25%;
+		}
+	.company-logo{text-align:center;
+				 }
+	.top-header{margin:auto;
+			   }	
+	.gallery-image-depth{width:90%;
+						 height:8000vw;
+						}
+}
+
+
+p{line-height:140%;display:block;}
+
+body {background-color:white;       	/*<!-- Background Grey color-->*/
+      font-size:1vw;
+	  font-family:Montserrat,sans-serif;
+	  /*z-index:-1;
+	  background-image:url("Footer Background Images/curve-design-futuristic-lines-911738.jpg");
+	  width:25%;
+	  height:10%;
+	  background-position:left bottom*/
+	  }
+
+
+
+										/* Link Style*/
+a:link {color:rgb(0,191,255);
+		text-decoration:none;}
+a:visited{ color:rgb(0,0,255);}
+a:hover{ text-decoration: underline;
+		 text-weight:bold;
+		 color:rgb(255, 166, 0);
+		 cursor: pointer;
+		 }
+		 
+		 
+											/*Top Header Animation(Marquee)*/
+		 
+.top-header-animation{padding:0.45em;
+			margin:-0.5em;
+			font-size:1.5em;
+			font-family:Montserrat,sans-serif;
+			font-weight:bold;
+			color:white;
+			background-color:rgb(148,0,211);
+			word-spacing:0.6em;
+			}
+
+			
+										/* Top Header Company Name */
+			
+.top-header{ font-size:3.8em;
+			 color:rgb(148,0,211);
+			 font-family:'Domine',serif;
+			 font-weight:bold;
+			 word-spacing:0.1em;
+			 text-align:center;
+			 position:relative;
+			 top:0.6em;
+			 left:3em;}
+			
+			
+									  /*Company Logo*/
+									  
+.company-logo{padding: 2.1428em 0em 10.7142em 8.5714em;
+			  filter:drop-shadow(0.5714em 0.5714em 0.7142em gray);
+			 }			  
+			
+										/* Navigation Bar Section */
+			
+.nav{position: sticky;
+	 top: 0;
+	 z-index:1;
+	 max-width:100%;
+	}
+
+.nav>ul{list-style-type:none;
+		padding:0em;
+		margin:0em;
+		overflow: hidden;
+		background-color:/*rgb(192,192,192)*/rgb(148,0,211);
+		}
+		
+		
+.nav>ul>li{float:left}
+
+.nav>ul>li>a {color:/*black*/white;
+			  display: block;
+			  text-align:center;
+			  font-size:1.425em;
+			  font-family:Montserrat,sans-serif;
+			  text-decoration:none;
+			  padding-top:0.8em;
+			  padding-bottom:0.8em;
+			  padding-right:3.2em;
+			  padding-left:3.2em;
+				 }
+				 
+.nav>ul>li>a:hover{color:orange;
+				   font-style:italic;
+				   background-color:/*rgb(96,96,96)*//*#b300b3*/#7a30c2;
+				   border-style: solid;
+				   border-width: 0 0 0 0.35em;
+				   border-color:#d623cb;
+				   }
+				   
+												/* Dropdown */
+
+.Dropdown{float:left;                                       yha dikkat h
+		  overflow:hidden;
+		 }
+.Dropdown>.drop-btn{background-color:inherit;
+					padding:0em;
+					margin:0em;
+					display:inline-block;
+				   }
+.Dropdown>.drop-btn:hover{ background-color:rgb(96,96,96);}
+.Dropdown>.drop-btn>a{
+					  color:black;
+					  display: block;
+					  
+					  font-size:1.425em;
+					  font-family:Montserrat,sans-serif;
+					  text-decoration:none;
+					  position:relative;
+					  padding-top:0.8em;
+					  padding-bottom:0.8em;
+					  padding-right:3.2em;
+					  padding-left:3.2em;
+					  background-color:inherit;
+					 }
+.Dropdown>.drop-btn>a:hover{color:orange;
+							font-style:italic;
+							background-color:rgb(96,96,96);
+						   }
+.Dropdown:hover>.Dropdown-Content{display:block;
+								  }
+.Dropdown-Content{display:none;
+				  position:absolute;
+				  background-color:white;
+				  box-shadow: 0em 0.5714em 1.1428em 0em rgba(0,0,0,0.4);
+				  z-index:1;
+				 }
+.Dropdown-Content>a{display:block;
+					text-decoration:none;
+					
+					color:black;
+					 padding-top:0.8571em;
+					padding-bottom:0.8571em;
+					padding-left:2.14em;
+					padding-right:2.14em;
+					min-width:3em;
+				   }
+.Dropdown-Content>a:hover{color:orange;
+						  font-style:italic;
+						  background-color:rgb(96,96,96);
+						 }
+		 
+		 
+.mySlides{max-width: 100%;}		 
+	
+									/* Button Style Properties */
+
+.button{ color: white;
+		 background-color:rgb(148,0,211);
+		 padding-bottom: 1.2857em;
+		 padding-top:1.2857em;
+		 padding-left:3.5714em;
+		 padding-right:3.5714em;
+		 margin:0.7142em 0.1428em;
+		 text-align:center;
+		 text-decoration:none;
+		 text-transform:uppercase;
+		 font-size:1.4285em;
+		 font-family:'Domine',serif;
+		 display:inline-block;
+		 border:none;
+		 cursor:pointer;}
+		 
+.gallery-image-depth{transition:all 0.3s linear 0s;
+					 
+					 border-radius:2.5%;
+					 padding:0.2em;
+					 max-width: 100%;
+					 height:25em;
+					 width:17.5rem;}		 
+.gallery-image-depth:hover{filter:drop-shadow(8px 8px 10px gray);
+						   transform:scale(1.09);}		 
+		 
+														/* Footer Section*/
+		 
+							/* Bottom up (^) icon */
+		 
+.Bottom-up-icon{ color:red;
+				 float:right;
+				 display:inline-block;
+				 font-size:2.142em;}
+				 
+.back{z-index:-1;
+	  background-image:url("Footer Background Images/curve-design-futuristic-lines-911738.jpg");
+	  width:25%;
+	  height:10%;
+background-position:left bottom;}
+
+.footer-sub-heading{font-size:1.2em;
+					font-weight: bold;
+					font-family:Montserrat,sans-serif;
+				   }
+				 
+.footer-text{line-height:1.9em;
+			 font-size:1.18em;
+			 font-weight:545;
+			 font-family:Montserrat,sans-serif;
+			}
+.transform-prop-button{transition: all 0.2s linear 0s;}
+.transform-prop-button:hover{transform:translate(0%, -20%);}
+
+							/* Bottom Copyright icon Style Properties */
+
+.copyright{ padding:1.2857em;
+			margin-bottom:-2.1428em;
+			margin-left:-0.6428em;
+			margin-right:-0.6428em;
+			font-size:1.2857em;
+			font-family:Montserrat,sans-serif;
+			text-align:center;
+			color:white;
+			background-color:rgb(148,0,211);
+			word-spacing:0.7142em;} 		 
+			
+			
+			
+										/* Style for Categories Section */
+										
+.categories-header{font-size:2.5em;
+				   font-family:Montserrat,sans-serif;
+				   text-align:center;
+				   font-weight:400;
+				   }										
+													
+.card-surrounding{padding-left:2.8571em;
+				  padding-right:2.8571em;
+				  padding-bottom:7.14em;
+				  float:left;
+				  display:inline-block;}												
+.card{
+	  width:21.42em;
+	  height:auto;
+	  display:inline-block;
+	  max-width: 100%;
+	  position:relative;
+	  border:1px solid #D3D3D3;
+	  border-radius:2.5%;
+	  transition: all 0.6s cubic-bezier(0.44, 0, 0.56, 1) 0s;/*all 0.8s cubic-bezier(0, 0, 0.35, 1.07) 0s*/;
+	  }
+.card:hover{box-shadow: 0em 0.8571em 1.4285em 0 rgba(0, 0, 0, 0.4);
+			transform:scale(1.14);}	  
+	  
+.card-image-specification{text-align:center;
+						  height:25em;
+						  width:100%;
+						  border-radius:2.5% 2.5% 0 0;
+						  }		
+.three-card-surrounding{padding: 3.57em 5.71em 14.28em 5.71em;
+						
+						}	
+.card>.txt{font-size:1em;
+		   text-align:center;
+		   font-family:arial;
+		   }
+.middle-hover-txt{transition: all 8s cubic-bezier(0.44, 0, 0.56, 1) 0s;
+				  position:absolute;
+				  top:30%;
+				  left:22.5%;	}	  			 
+.card>.middle-hover-txt>.hover-txt{display:none;
+								  }		   
+.card:hover>.middle-hover-txt>.hover-txt{background-color:rgb(148,0,211);
+		   color:white;
+		   max-width:8em;
+		   font-size:1.6em;
+		   
+		   padding:0.5em 1.3em;
+		   text-align:center;
+		   display:block;
+		  }
+		  
+		  
+												/*About Us */
+												
+.our-mission{font-size:1.2vw;
+			 line-height:1.2;
+			 color:black;
+			 margin:auto;
+			 word-spacing:0.5rem;
+			 text-transform: uppercase;
+			 font-family: "Nike TG", "Arial black", "Arial Bold", Arial, sans-serif;
+			 text-align:center;
+			 padding:3rem 0 0.5rem 0;
+			 text-decoration:underline;
+			}	
+.about-us-mission-moto{max-width:80%;
+					   margin:auto;
+					   color:black;
+					   font-size:7vw;
+					   max-height:50%;
+					   text-align:center;
+					   word-spacing:1rem;
+					   line-height:1.2;
+					   text-transform: uppercase;
+					   font-family: "Nike TG", "Arial black", "Arial Bold", Arial, sans-serif;
+					   padding:1rem; 
+					 
+					  }
+												
+	  
